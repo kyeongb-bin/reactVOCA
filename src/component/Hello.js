@@ -5,10 +5,14 @@ export default function Hello() {
     function showAge(age) {
         console.log(age);
     }
+    function showText(txt){
+        console.log(txt);
+    }
 
     return (
         <div>
-            <h1>Hello</h1>
+            <h1>state</h1>
+            <h2>컴포넌트의 속성값</h2>
             <button onClick={showName}>Show name</button>
             <button 
                 onClick={() => {
@@ -19,7 +23,8 @@ export default function Hello() {
             </button>
             <input type="text" 
                 onChange={e => {
-                    console.log(e.target.value);
+                    const txt = e.target.value;
+                    showText(txt);
                 }} 
             />
         </div>    
